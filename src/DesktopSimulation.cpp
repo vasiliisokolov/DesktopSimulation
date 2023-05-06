@@ -12,7 +12,8 @@ enum operation
 int main()
 {
 	std::cout << "Hello CMake." << std::endl;
-	
+	Screen screen;
+
 	int op;
 	while (true)
 	{
@@ -27,13 +28,15 @@ int main()
 			switch (op)
 			{
 			case operation::move:
-				
+				screen.mv();
+				screen.showScreen();
 				break;
 			case operation::resize:
-				
+				screen.re();
+				screen.showScreen();
 				break;
 			case operation::display:
-				
+				screen.showScreen();
 				break;
 			case operation::close:
 
