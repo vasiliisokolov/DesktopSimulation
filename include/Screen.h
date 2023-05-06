@@ -1,5 +1,6 @@
 #pragma once
 
+
 class Screen
 {
 	int screenWidth = 80;
@@ -9,9 +10,9 @@ class Screen
 public:
 	void showScreen()
 	{
-		for (int i = 50; i > 0; i--)
+		for (int i = 0; i > 50; i++)
 		{
-			for (int j = 80; j < 80; j++)
+			for (int j = 0; j < 80; j++)
 			{
 				if (window.getX() <= i && (window.getX() - window.getHeight()) >= i
 					&& window.getY() >= j && (window.getY() + window.getWidth() <= j))
@@ -23,6 +24,8 @@ public:
 					std::cout << '0';
 				}
 			}
+			std::cout << std::endl;
+
 		}
 	}
 
