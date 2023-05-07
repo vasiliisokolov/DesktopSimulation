@@ -11,7 +11,7 @@ enum operation
 
 int main()
 {
-	std::cout << "Hello CMake." << std::endl;
+	std::cout << "Desktop Simulation." << std::endl;
 	Screen screen;
 
 	int op;
