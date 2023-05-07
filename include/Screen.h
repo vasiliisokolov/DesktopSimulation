@@ -10,12 +10,15 @@ class Screen
 public:
 	void showScreen()
 	{
-		for (int i = 0; i > 50; i++)
+		int a = window.getX();
+		int b = window.getY();
+		int c = window.getX() + window.getWidth();
+		int d = window.getY() + window.getHeight();
+		for (int i = 0; i < 50; i++)
 		{
 			for (int j = 0; j < 80; j++)
 			{
-				if (window.getX() <= i && (window.getX() - window.getHeight()) >= i
-					&& window.getY() >= j && (window.getY() + window.getWidth() <= j))
+				if ((i >= b && i <=d) && (j >= a && j <= c))
 				{
 					std::cout << '1';
 				}
@@ -39,7 +42,11 @@ public:
 		std::cin >> m >> n;
 		window.setWidth(m);
 		window.setHeight(n);
-
+		/*check:
+		std::cout << "X: " << window.getX() << std::endl;
+		std::cout << "Y: " << window.getY() << std::endl;
+		std::cout << "W: " << window.getWidth() << std::endl;
+		std::cout << "H: " << window.getHeight() << std::endl;*/
 	}
 
 	void mv()
@@ -48,6 +55,11 @@ public:
 		std::cout << "Enter the offset: ";
 		std::cin >> m >> n;
 		window.setCor(m, n);
+		/*check:
+		std::cout << "X: " << window.getX() << std::endl;
+		std::cout << "Y: " << window.getY() << std::endl;
+		std::cout << "W: " << window.getWidth() << std::endl;
+		std::cout << "H: " << window.getHeight() << std::endl; */
 	}
 
 };

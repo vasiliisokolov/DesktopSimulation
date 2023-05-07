@@ -18,7 +18,7 @@ public:
 		x = m;
 		if (n > 50)	n = 50;
 		if (n < 0)	n = 0;
-		x = n;
+		y = n;
 	}
 
 	void setWidth(int w)
